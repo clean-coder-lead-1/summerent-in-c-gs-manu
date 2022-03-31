@@ -24,4 +24,10 @@ TEST_CASE("Classifies the breach according to type of cooling")
 	REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, -1) == TOO_LOW);
 	REQUIRE(classifyTemperatureBreach(MED_ACTIVE_COOLING, 39) == NORMAL);
 }
+TEST_CASE("Checks if an alert is needed based on the breach type") 
+{
+	REQUIRE(isAlertNeeded(NORMAL) == false);
+	REQUIRE(isAlertNeeded(TOO_HIGH) == true);
+	REQUIRE(isAlertNeeded(TOO_LOW) == true);
+}
   
