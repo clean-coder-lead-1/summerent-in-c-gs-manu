@@ -31,4 +31,4 @@ void checkAndAlert(
 void sendToController(BreachType breachType);
 void sendToEmail(BreachType breachType);
 bool isAlertNeeded (BreachType breachType);
-void Alert(AlertTarget alertTarget);
+void Alert(AlertTarget alertTarget, BreachType breachType);
