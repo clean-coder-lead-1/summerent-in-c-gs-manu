@@ -74,5 +74,5 @@ void sendToEmail(BreachType breachType)
 
 bool isAlertNeeded (BreachType breachType)
 {
-	return ((breachType == TOO_LOW) || (breachType == TOO_HIGH)));
+	return ((breachType == TOO_LOW) || (breachType == TOO_HIGH));
 }
