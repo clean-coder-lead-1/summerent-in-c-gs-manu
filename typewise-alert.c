@@ -12,7 +12,7 @@ BreachType inferBreach(double value, double lowerLimit, double upperLimit)
 BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC) 
 {
   int lowerLimit = 0; // Always 0 for now
-  
+  int upperLimit = 0;
   
   switch(coolingType) // I still like the swtich statement here because there can be more types of cooling!
   {
