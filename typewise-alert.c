@@ -23,7 +23,7 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
 		upperLimit = 40;
 		break;
 	default:
-		int upperLimit = 35; // Assume passive cooling by default
+		upperLimit = 35; // Assume passive cooling by default
 		break;
   }
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
