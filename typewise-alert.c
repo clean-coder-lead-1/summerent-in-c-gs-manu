@@ -36,15 +36,20 @@ void checkAndAlert(AlertTarget alertTarget, BatteryCharacter batteryChar, double
 
 	if(isAlertNeeded(breachType))
 	{
-		switch(alertTarget) 
-		{
-			case TO_CONTROLLER:
-				sendToController(breachType);
-			break;
-			case TO_EMAIL:
-				sendToEmail(breachType);
-			break;
-		}
+		Alert(alertTarget);
+	}
+}
+
+void Alert(AlertTarget alertTarget)
+{
+	switch(alertTarget) 
+	{
+		case TO_CONTROLLER:
+			sendToController(breachType);
+		break;
+		case TO_EMAIL:
+			sendToEmail(breachType);
+		break;
 	}
 }
 
