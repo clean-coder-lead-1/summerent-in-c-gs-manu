@@ -3,15 +3,9 @@
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) 
 {
-  BreachType breach = NORMAL;
-  if(value < lowerLimit) 
-  {
-    breach = TOO_LOW;
-  }
-  else if(value > upperLimit) 
-  {
-    breach = TOO_HIGH;
-  }
+  BreachType breach;
+  breach = (value < lowerLimit) ? TOO_LOW : ((value > upperLimit) : TOO_HIGH : NORMAL); // is this better?
+
   return breach;  
 }
 
@@ -38,9 +32,7 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
 void checkAndAlert(AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) 
 {
 
-  BreachType breachType = classifyTemperatureBreach(
-    batteryChar.coolingType, temperatureInC
-  );
+  BreachType breachType = classifyTemperatureBreach(batteryChar.coolingType, temperatureInC);
 
   switch(alertTarget) 
   {
