@@ -36,11 +36,11 @@ void checkAndAlert(AlertTarget alertTarget, BatteryCharacter batteryChar, double
 
 	if(isAlertNeeded(breachType))
 	{
-		Alert(alertTarget);
+		Alert(alertTarget, breachType);
 	}
 }
 
-void Alert(AlertTarget alertTarget)
+void Alert(AlertTarget alertTarget, BreachType breachType)
 {
 	switch(alertTarget) 
 	{
