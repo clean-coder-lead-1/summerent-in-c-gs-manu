@@ -17,13 +17,14 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
   switch(coolingType) // I still like the swtich statement here because there can be more types of cooling!
   {
     case HI_ACTIVE_COOLING:
-      upperLimit = 45;
-      break;
+		upperLimit = 45;
+		break;
     case MED_ACTIVE_COOLING:
-      upperLimit = 40;
-      break;
+		upperLimit = 40;
+		break;
 	default:
-	int upperLimit = 35; // Assume passive cooling by default
+		int upperLimit = 35; // Assume passive cooling by default
+		break;
   }
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
 }
@@ -64,6 +65,7 @@ void sendToEmail(BreachType breachType)
       printf("Hi, the temperature is too high\n");
       break;
     case NORMAL:
+	default:
       break;
   }
 }
