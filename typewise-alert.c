@@ -4,7 +4,7 @@
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) 
 {
   BreachType breach;
-  breach = (value < lowerLimit) ? TOO_LOW : ((value > upperLimit) : TOO_HIGH : NORMAL); // is this better?
+  breach = (value < lowerLimit) ? TOO_LOW : ((value > upperLimit) ? TOO_HIGH : NORMAL); // is this better?
 
   return breach;  
 }
